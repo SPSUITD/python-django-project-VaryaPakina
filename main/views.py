@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth import forms, authenticate, logout, login, get_user_model
+from django.contrib.auth import forms, logout, get_user_model
 from django.db.models import Q
 
 from .forms import MessageForm, ChannelMessageForm
