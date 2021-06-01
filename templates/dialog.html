@@ -1,0 +1,13 @@
+{% for msg in messages %}
+  {% ifchanged %}{{ msg.author }}:<br>{% endifchanged %}
+  {{ msg.publication_time.time }} {{ msg.text }}<br>
+{% endfor %}
+<form method="POST">
+  {% csrf_token %}
+  <input type='text' required name="text">
+  <button type="submit">Отправить</button>
+</form>
+<br>
+<br>
+<br>
+<a href="{% url 'index' %}">На главную</a>

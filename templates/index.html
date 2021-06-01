@@ -1,0 +1,12 @@
+<p>Пользователи:</p>
+{% for user in users %}
+<a href="{% url 'dialog' pk=user.pk %}">{{ user.username }}</a><br>
+{% endfor %}
+<p>Каналы:</p>
+{% for channel in channels %}
+  <a href="{% url 'channel' title=channel.title %}">{{ channel.title }}</a><br>
+{% endfor %}
+<br>
+<br>
+<br>
+<a href="{% url 'logout' %}">Выйти</a>
